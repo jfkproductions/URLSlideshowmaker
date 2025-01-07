@@ -90,4 +90,5 @@ Run the following command to generate packages for Windows, macOS, and Linux:
 
 Windows/linux/mac 
 Generate a Windows installer:   
-npm run make
+npm run dist
+
