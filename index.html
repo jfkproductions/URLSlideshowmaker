@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #333;
+            color: #fff;
+        }
+
+        .form button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form button:hover {
+            background: #45a049;
+        }
+
+        .table-container {
+            flex: 1;
+            overflow-y: auto;
+            background: #333;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        table th {
+            background: #555;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        table td {
+            background: #444;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .action-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .action-buttons button:hover {
+            color: #4CAF50;
+        }
+
+        .footer {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .footer input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #333;
+            color: #fff;
+        }
+
+        .footer button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .footer button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Slideshow Setup</h1>
+        <div class="form">
+            <input type="text" id="nameInput" placeholder="Enter name">
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <button id="addButton">Add URL</button>
+        </div>
+        <div id="errorMessage" style="color: red; text-align: center; margin-top: 10px;"></div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>URL</th>
+                        <th>Duration (s)</th>
+                        <th>Actions</th>
+                     
+                    </tr>
+                </thead>
+                <tbody id="urlTableBody"></tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <input type="number" id="intervalInput" placeholder="Interval (seconds)" value="60">
+            <button id="startButton">Start Slideshow</button>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
