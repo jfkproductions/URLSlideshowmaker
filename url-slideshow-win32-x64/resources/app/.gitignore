@@ -1,6 +1,9 @@
 # Node modules
 node_modules/
 out/
+url-slideshow-darwin-x64/
+url-slideshow-linux-x64/
+url-slideshow-win32-x64/
 
 # Logs
 logs/

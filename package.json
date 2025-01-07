@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron .",
     "package": "electron-packager . url-slideshow --platform=all --arch=all --icon=build/icon --overwrite"
-   
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
@@ -24,18 +23,17 @@
     "electron": "^25.9.8",
     "electron-packager": "^17.1.2"
   },
- "build": {
+  "build": {
     "appId": "com.urlslideshow.app",
     "productName": "URL Slideshow",
     "mac": {
-        "icon": "build/icon.icns"
+      "icon": "build/icon.icns"
     },
     "win": {
-        "icon": "build/icon.ico"
+      "icon": "build/icon.ico"
     },
     "linux": {
-        "icon": "build/icon.png"
+      "icon": "build/icon.png"
     }
-}
-
+  }
 }

@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron .",
     "package": "electron-packager . url-slideshow --platform=all --arch=all --icon=build/icon --overwrite"
-   
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
@@ -24,44 +23,17 @@
     "electron": "^25.9.8",
     "electron-packager": "^17.1.2"
   },
-  "config": {
-    "forge": {
-      "packagerConfig": {
-        "asar": true
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "authors": "Your Name or Company Name",
-            "description": "A URL slideshow application"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-dmg",
-          "config": {
-            "icon": "build/icon.icns"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {
-            "icon": "build/icon.png"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {
-            "icon": "build/icon.png"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        }
-      ]
+  "build": {
+    "appId": "com.urlslideshow.app",
+    "productName": "URL Slideshow",
+    "mac": {
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "icon": "build/icon.png"
     }
   }
 }

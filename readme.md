@@ -90,5 +90,7 @@ Run the following command to generate packages for Windows, macOS, and Linux:
 
 Windows/linux/mac 
 Generate a Windows installer:   
+npm install --save-dev electron-packager
+
 npm run dist
 
