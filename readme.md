@@ -92,5 +92,4 @@ Windows/linux/mac
 Generate a Windows installer:   
 npm install --save-dev electron-packager
 
-npm run dist
-
+npm run dist or  npm run package  
